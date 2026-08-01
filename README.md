@@ -2,8 +2,8 @@
 
 > A VS Code extension that hides files & folders from the Explorer via a right-click menu, plus a dedicated **Hidden Items** pane to manage and toggle them.
 
-[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/lerxst.hide-items-custom?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=lerxst.hide-items-custom)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/lerxst.hide-items-custom)](https://marketplace.visualstudio.com/items?itemName=lerxst.hide-items-custom)
+[![Marketplace](https://vsmarketplacebadges.dev/version-short/lerxst.hide-items-custom.svg?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=lerxst.hide-items-custom)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/lerxst.hide-items-custom.svg)](https://marketplace.visualstudio.com/items?itemName=lerxst.hide-items-custom)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
 VS Code can already hide things through the `files.exclude` setting, but editing that JSON by hand is tedious. **Hide Items Custom** turns it into a two-click operation: right-click anything in the Explorer, pick a pattern, and it's gone. A **Hidden Items** pane then lists every rule so you can toggle, remove, or reset them without ever opening `settings.json`.
