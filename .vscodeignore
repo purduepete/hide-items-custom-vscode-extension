@@ -1,0 +1,10 @@
+.git/**
+.github/**
+.gitignore
+.vscode/**
+.vscodeignore
+.eslintrc*
+.prettierrc*
+**/*.vsix
+**/.DS_Store
+package-lock.json

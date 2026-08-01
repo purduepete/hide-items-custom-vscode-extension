@@ -1,0 +1,23 @@
+{
+    "command.openSettings.title": "Erweiterungseinstellungen aktualisieren",
+    "config.properties.backup": "Ressourcenkonfiguration: Konfigurieren Sie Dateien mit Glob-Mustern so, dass sie immer eine leere letzte Zeile haben.",
+    "config.properties.showPicker": "Dateimusterauswahl anzeigen, wenn aktiviert, oder Exakte Übereinstimmung ausschließen, wenn deaktiviert.",
+    "config.removedKey": "{0} aus ausgeblendeten Objekten entfernt",
+    "debug.logger.error": "⚠ ERROR: [{0}] {1}",
+    "debug.logger.missingWorkspace": "Arbeitsbereichsordner nicht gefunden. Öffnen Sie den Ordner oder Arbeitsbereich und versuchen Sie es erneut.",
+    "debug.logger.workspace": "\nWorkspace: {0}",
+    "error.ifExists": "{0} existiert nicht",
+    "error.parseFilePath": "{0} ist nicht verfügbar",
+    "extension.title": "Explorer Exclude",
+    "package.exclude": "Zu ausgeblendeten Objekten hinzufügen ...",
+    "package.pane": "Versteckte Gegenstände",
+    "package.remove": "Aus ausgeblendeten Objekten entfernen",
+    "package.toggle": "Sichtbarkeit umschalten",
+    "package.disableAll": "Alle deaktivieren",
+    "package.enableAll": "Alles aktivieren",
+    "package.reset": "Versteckte Objekte zurücksetzen",
+    "picker.placeholder": "Was möchtest du verstecken? Wählen Sie alle zutreffenden.",
+    "tooltip.hide": "{0} ausblenden",
+    "tooltip.show": "{0} anzeigen",
+    "reset.prompt": "Versteckte Objekte zurücksetzen? Das kann nicht rückgängig gemacht werden."
+}

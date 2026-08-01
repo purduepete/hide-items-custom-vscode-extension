@@ -1,0 +1,228 @@
+{
+	"name": "hide-items-custom",
+	"displayName": "Hide Items Custom",
+	"version": "1.0.3",
+	"description": "Hide Items Custom lets you easily Hide Files & Folders with Dynamic Filter Options.  Add a New 'Hidden Items' Explorer Pane for you to Manage and Quickly Toggle Visibility of Hidden Items.",
+	"license": "MIT",
+	"publisher": "lerxst",
+	"categories": [
+		"Other"
+	],
+	"main": "extension/index.js",
+	"icon": "extension/resources/icon.png",
+	"galleryBanner": {
+		"color": "#1c1c1c",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/purduepete/hide-items-custom-vscode-extension"
+	},
+	"bugs": {
+		"url": "https://github.com/purduepete/hide-items-custom-vscode-extension/issues"
+	},
+	"homepage": "https://github.com/purduepete/hide-items-custom-vscode-extension#readme",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"keywords": [
+		"context-menu",
+		"exclude",
+		"explorer",
+		"files",
+		"folders",
+		"hidden",
+		"hide",
+		"ignore",
+		"pane",
+		"show",
+		"toggle",
+		"workspace"
+	],
+	"contributors": [],
+	"activationEvents": [
+		"onStartupFinished",
+		"onView:extension",
+		"onCommand:hide-items-custom.enabled",
+		"onCommand:hide-items-custom.exclude",
+		"onCommand:hide-items-custom.remove",
+		"onCommand:hide-items-custom.toggle",
+		"onCommand:hide-items-custom.toggleAllOn",
+		"onCommand:hide-items-custom.toggleAllOff",
+		"onCommand:hide-items-custom.disableAll",
+		"onCommand:hide-items-custom.enableAll",
+		"onCommand:hide-items-custom.reset"
+	],
+	"contributes": {
+		"configuration": [
+			{
+				"title": "%extension.title%",
+				"properties": {
+					"explorerExclude.backup": {
+						"order": 1,
+						"type": [
+							"object",
+							"null"
+						],
+						"default": {},
+						"description": "%config.properties.backup%",
+						"scope": "window"
+					},
+					"explorerExclude.showPicker": {
+						"order": 2,
+						"type": "boolean",
+						"default": true,
+						"description": "%config.properties.showPicker%",
+						"scope": "window"
+					}
+				}
+			}
+		],
+		"views": {
+			"explorer": [
+				{
+					"id": "explorerExclude.pane.items",
+					"name": "%package.pane%"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "hide-items-custom.exclude",
+				"title": "%package.exclude%"
+			},
+			{
+				"command": "hide-items-custom.remove",
+				"title": "%package.remove%"
+			},
+			{
+				"command": "hide-items-custom.toggle",
+				"title": "%package.toggle%"
+			},
+			{
+				"command": "hide-items-custom.toggleAllOn",
+				"title": "%package.toggle%",
+				"category": "ExplorerExclude",
+				"icon": {
+					"dark": "extension/resources/dark/toggle-on.svg",
+					"light": "extension/resources/light/toggle-on.svg"
+				}
+			},
+			{
+				"command": "hide-items-custom.toggleAllOff",
+				"title": "%package.toggle%",
+				"category": "ExplorerExclude",
+				"icon": {
+					"dark": "extension/resources/dark/toggle-off.svg",
+					"light": "extension/resources/light/toggle-off.svg"
+				}
+			},
+			{
+				"command": "hide-items-custom.disableAll",
+				"title": "%package.disableAll%",
+				"category": "ExplorerExclude",
+				"icon": {
+					"dark": "extension/resources/dark/unchecked.svg",
+					"light": "extension/resources/light/unchecked.svg"
+				}
+			},
+			{
+				"command": "hide-items-custom.enableAll",
+				"title": "%package.enableAll%",
+				"category": "ExplorerExclude",
+				"icon": {
+					"dark": "extension/resources/dark/checked.svg",
+					"light": "extension/resources/light/checked.svg"
+				}
+			},
+			{
+				"command": "hide-items-custom.reset",
+				"title": "%package.reset%",
+				"category": "ExplorerExclude",
+				"icon": {
+					"dark": "extension/resources/dark/reset.svg",
+					"light": "extension/resources/light/reset.svg"
+				}
+			},
+			{
+				"command": "hide-items-custom.openSettings",
+				"title": "%command.openSettings.title%",
+				"category": "ExplorerExclude",
+				"icon": {
+					"dark": "extension/resources/dark/settings.svg",
+					"light": "extension/resources/light/settings.svg"
+				}
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "hide-items-custom.exclude",
+					"group": "hide-items-custom@1",
+					"when": "activeViewlet == 'workbench.view.explorer'"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "hide-items-custom.remove",
+					"group": "hide-items-custom@1",
+					"when": "view == explorerExclude.pane.items && viewItem && viewItem != '**/.git' && viewItem != '**/.svn'&& viewItem != '**/.hg'&& viewItem != '**/CVS'&& viewItem != '**/.DS_Store' && viewItem != '**/Thumbs.db' && viewItem != '**/*.git'"
+				}
+			],
+			"view/title": [
+				{
+					"command": "hide-items-custom.disableAll",
+					"group": "navigation@10",
+					"when": "view == explorerExclude.pane.items"
+				},
+				{
+					"command": "hide-items-custom.enableAll",
+					"group": "navigation@11",
+					"when": "view == explorerExclude.pane.items"
+				},
+				{
+					"command": "hide-items-custom.toggleAllOn",
+					"group": "navigation@12",
+					"when": "view == explorerExclude.pane.items && !hide-items-custom.enabled"
+				},
+				{
+					"command": "hide-items-custom.toggleAllOff",
+					"group": "navigation@12",
+					"when": "view == explorerExclude.pane.items && hide-items-custom.enabled"
+				},
+				{
+					"command": "hide-items-custom.reset",
+					"group": "navigation@13",
+					"when": "view == explorerExclude.pane.items"
+				},
+				{
+					"command": "hide-items-custom.openSettings",
+					"group": "navigation@14",
+					"when": "view == explorerExclude.pane.items"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"test": "npm run -s test:lint && npm run -s test:unit",
+		"test:unit": "echo 'No Unit Tests'",
+		"test:lint": "eslint --ext .js ./extension --fix",
+		"package": "vsce package",
+		"publish": "vsce publish"
+	},
+	"dependencies": {
+		"jsonc-parser": "^3.1.0",
+		"marked": "^4.0.18",
+		"vscode-nls-i18n": "^0.2.4"
+	},
+	"devDependencies": {
+		"@vscode/vsce": "^3.2.1",
+		"babel-eslint": "^10.1.0",
+		"esbuild": "^0.14.54",
+		"eslint": "^8.20.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1"
+	}
+}
