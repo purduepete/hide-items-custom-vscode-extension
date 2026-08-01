@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "更新擴展設置",
-    "config.properties.backup": "資源配置：使用模式配置文件以始終有一個空的最後一行。",
+    "config.properties.backup": "files.exclude 的內部備份，在「切換可見性」顯示所有項目時儲存。由擴充功能自動管理，請勿編輯。",
     "config.properties.showPicker": "啟用時顯示文件模式選擇器或禁用時排除完全匹配。",
     "config.removedKey": "從隱藏項目中刪除了{0}",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

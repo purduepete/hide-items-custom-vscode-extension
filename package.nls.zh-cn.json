@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "更新扩展设置",
-    "config.properties.backup": "资源配置：使用模式配置文件以始终有一个空的最后一行。",
+    "config.properties.backup": "files.exclude 的内部备份，在“切换可见性”显示所有项目时保存。由扩展自动管理，请勿编辑。",
     "config.properties.showPicker": "启用时显示文件模式选择器或禁用时排除完全匹配。",
     "config.removedKey": "从隐藏项目中删除了{0}",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "Frissítse a bővítmény beállításait",
-    "config.properties.backup": "Erőforrás-konfiguráció: Állítsa be a fájlokat glob-mintákkal úgy, hogy az utolsó sor mindig üres legyen.",
+    "config.properties.backup": "A files.exclude belső biztonsági másolata, amely akkor jön létre, amikor a Láthatóság váltása megjeleníti az összes elemet. Automatikusan kezelt; ne szerkessze.",
     "config.properties.showPicker": "Fájlmintaválasztó megjelenítése, ha engedélyezve van, vagy Pontos egyezés kizárása, ha le van tiltva.",
     "config.removedKey": "{0} eltávolítása a rejtett elemekből",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

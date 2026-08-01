@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "拡張設定の更新",
-    "config.properties.backup": "リソース構成：globパターンを使用してファイルを構成し、常に最後の行が空になるようにします。",
+    "config.properties.backup": "files.exclude の内部バックアップです。表示の切り替えですべての項目を表示したときに保存されます。自動的に管理されるため、編集しないでください。",
     "config.properties.showPicker": "有効な場合はファイルパターンピッカーを表示し、無効な場合は完全一致を除外します。",
     "config.removedKey": "隠しアイテムから{0}を削除しました",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

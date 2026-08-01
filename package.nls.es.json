@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "Actualizar la configuración de la extensión",
-    "config.properties.backup": "Configuración de recursos: configure archivos usando patrones globales para tener siempre una última línea vacía.",
+    "config.properties.backup": "Copia de seguridad interna de files.exclude, creada cuando Alternar visibilidad muestra todos los elementos. Se gestiona automáticamente; no la edite.",
     "config.properties.showPicker": "Mostrar selector de patrón de archivo cuando está habilitado o excluir coincidencia exacta cuando está deshabilitado.",
     "config.removedKey": "Se eliminó {0} de los elementos ocultos",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

@@ -121,6 +121,8 @@ Confirm you have a folder or workspace open, then check `.vscode/settings.json` 
 **My rules disappeared**
 Look at `explorerExclude.backup` in `.vscode/settings.json`. If it's non-empty, **Toggle Visibility** is active — click it again to restore your rules.
 
+More detail, including Windows glob-separator issues, is in [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
 ## Contributing
 
 Issues and pull requests are welcome at [purduepete/hide-items-custom-vscode-extension](https://github.com/purduepete/hide-items-custom-vscode-extension).

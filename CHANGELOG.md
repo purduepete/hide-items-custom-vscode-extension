@@ -1,5 +1,18 @@
 # Change Log
 
+## v1.0.5
+
+-   Fix the Welcome pane, which opened as a blank tab on every install and upgrade. It
+    failed twice over: `marked` v4 exports an object rather than a callable, so
+    `marked(...)` threw, and it also read a `TROUBLESHOOTING.md` that was never shipped.
+-   Add the missing `TROUBLESHOOTING.md`, so the Welcome pane's third section has content.
+-   Rewrite the `explorerExclude.backup` setting description in all 14 languages. Every
+    locale carried the same text copied from an unrelated extension, describing an
+    "empty last line" option that does not exist here.
+-   Drop dead activation events, including `onView:extension` (no such view) and nine
+    `onCommand:` entries made redundant by `onStartupFinished`.
+-   Add a `.prettierrc` so the checked-in formatting is stable.
+
 ## v1.0.4
 
 -   Fix hiding on Windows. Generated glob patterns used the platform path separator, so

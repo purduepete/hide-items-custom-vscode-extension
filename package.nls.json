@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "Update Extension Settings",
-    "config.properties.backup": "Resource configuration: Configure files using glob patterns to have an empty last line always.",
+    "config.properties.backup": "Internal backup of files.exclude, saved when Toggle Visibility reveals all items. Managed automatically; do not edit.",
     "config.properties.showPicker": "Show File Pattern Picker when Enabled or Exclude Exact Match when disabled.",
     "config.removedKey": "Removed {0} from Hidden Items",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

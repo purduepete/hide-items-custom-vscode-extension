@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "Aggiorna le impostazioni dell'estensione",
-    "config.properties.backup": "Configurazione delle risorse: configura i file utilizzando i modelli glob per avere sempre un'ultima riga vuota.",
+    "config.properties.backup": "Backup interno di files.exclude, creato quando Attiva/disattiva visibilità mostra tutti gli elementi. Gestito automaticamente; non modificare.",
     "config.properties.showPicker": "Mostra Selettore modello file quando abilitato o Escludi corrispondenza esatta quando disabilitato.",
     "config.removedKey": "Rimosso {0} da oggetti nascosti",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

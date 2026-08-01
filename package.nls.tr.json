@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "Uzantı Ayarlarını Güncelle",
-    "config.properties.backup": "Kaynak yapılandırması: Her zaman boş bir son satıra sahip olmak için glob kalıplarını kullanarak dosyaları yapılandırın.",
+    "config.properties.backup": "files.exclude ögesinin dahili yedeği; Görünürlüğü Değiştir tüm ögeleri gösterdiğinde kaydedilir. Otomatik olarak yönetilir; düzenlemeyin.",
     "config.properties.showPicker": "Etkinleştirildiğinde Dosya Desen Seçici'yi göster veya devre dışı bırakıldığında Tam Eşleşmeyi Hariç Tut.",
     "config.removedKey": "Gizli Öğelerden {0} kaldırıldı",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

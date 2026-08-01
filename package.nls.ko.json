@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "확장 설정 업데이트",
-    "config.properties.backup": "리소스 구성: 항상 마지막 줄이 비어 있도록 glob 패턴을 사용하여 파일을 구성합니다.",
+    "config.properties.backup": "files.exclude의 내부 백업입니다. 표시 전환으로 모든 항목을 표시할 때 저장됩니다. 자동으로 관리되므로 편집하지 마십시오.",
     "config.properties.showPicker": "활성화된 경우 파일 패턴 선택기를 표시하거나 비활성화된 경우 정확히 일치를 제외합니다.",
     "config.removedKey": "숨겨진 항목에서 {0}을 (를) 제거했습니다.",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

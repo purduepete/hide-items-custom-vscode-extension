@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "Erweiterungseinstellungen aktualisieren",
-    "config.properties.backup": "Ressourcenkonfiguration: Konfigurieren Sie Dateien mit Glob-Mustern so, dass sie immer eine leere letzte Zeile haben.",
+    "config.properties.backup": "Interne Sicherung von files.exclude, die erstellt wird, wenn Sichtbarkeit umschalten alle Elemente einblendet. Wird automatisch verwaltet; nicht bearbeiten.",
     "config.properties.showPicker": "Dateimusterauswahl anzeigen, wenn aktiviert, oder Exakte Übereinstimmung ausschließen, wenn deaktiviert.",
     "config.removedKey": "{0} aus ausgeblendeten Objekten entfernt",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",

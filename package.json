@@ -1,7 +1,7 @@
 {
     "name": "hide-items-custom",
     "displayName": "Hide Items Custom",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Hide Items Custom lets you easily Hide Files & Folders with Dynamic Filter Options.  Add a New 'Hidden Items' Explorer Pane for you to Manage and Quickly Toggle Visibility of Hidden Items.",
     "license": "MIT",
     "publisher": "lerxst",
@@ -41,17 +41,7 @@
     ],
     "contributors": [],
     "activationEvents": [
-        "onStartupFinished",
-        "onView:extension",
-        "onCommand:hide-items-custom.enabled",
-        "onCommand:hide-items-custom.exclude",
-        "onCommand:hide-items-custom.remove",
-        "onCommand:hide-items-custom.toggle",
-        "onCommand:hide-items-custom.toggleAllOn",
-        "onCommand:hide-items-custom.toggleAllOff",
-        "onCommand:hide-items-custom.disableAll",
-        "onCommand:hide-items-custom.enableAll",
-        "onCommand:hide-items-custom.reset"
+        "onStartupFinished"
     ],
     "contributes": {
         "configuration": [

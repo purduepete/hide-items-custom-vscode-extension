@@ -1,6 +1,6 @@
 {
     "command.openSettings.title": "Atualizar configurações de extensão",
-    "config.properties.backup": "Configuração de recursos: configure arquivos usando padrões glob para ter sempre uma última linha vazia.",
+    "config.properties.backup": "Backup interno de files.exclude, criado quando Alternar visibilidade exibe todos os itens. Gerenciado automaticamente; não edite.",
     "config.properties.showPicker": "Mostrar seletor de padrão de arquivo quando ativado ou Excluir correspondência exata quando desativado.",
     "config.removedKey": "Removido {0} dos itens ocultos",
     "debug.logger.error": "⚠ ERROR: [{0}] {1}",
