@@ -40,13 +40,13 @@ code --install-extension lerxst.hide-items-custom
 
 For a file at `src/components/Button.test.ts`, the picker offers patterns along these lines:
 
-| Pattern | Hides |
-| --- | --- |
-| `src/components/Button.test.ts` | just this one file |
-| `**/Button.test.ts` | that filename, anywhere in the workspace |
-| `src/components/*.ts` | all `.ts` files in that folder |
-| `src/components/*.*` | everything in that folder |
-| `**/*.ts` | every `.ts` file in the workspace |
+| Pattern                         | Hides                                    |
+| ------------------------------- | ---------------------------------------- |
+| `src/components/Button.test.ts` | just this one file                       |
+| `**/Button.test.ts`             | that filename, anywhere in the workspace |
+| `src/components/*.ts`           | all `.ts` files in that folder           |
+| `src/components/*.*`            | everything in that folder                |
+| `**/*.ts`                       | every `.ts` file in the workspace        |
 
 Prefer to skip the prompt? Set `explorerExclude.showPicker` to `false` and the item you clicked is hidden immediately, with no picker.
 
@@ -56,15 +56,15 @@ The **Hidden Items** pane appears in the Explorer sidebar. Click any row to togg
 
 The pane's title bar has these actions:
 
-| Action | What it does |
-| --- | --- |
-| **Enable All** | Turns every rule on. |
-| **Disable All** | Turns every rule off, leaving the rules in place. |
-| **Toggle Visibility** | Temporarily reveals everything, backing up your current state; click again to restore it exactly. |
-| **Reset Hidden Items** | Clears your rules and restores the VS Code defaults (`**/.git`, `**/.svn`, `**/.hg`, `**/CVS`, `**/.DS_Store`, `**/Thumbs.db`, `**/*.git`). |
-| **Update Extension Settings** | Opens the extension's settings. |
+| Action                        | What it does                                                                                                                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Enable All**                | Turns every rule on.                                                                                                                        |
+| **Disable All**               | Turns every rule off, leaving the rules in place.                                                                                           |
+| **Toggle Visibility**         | Temporarily reveals everything, backing up your current state; click again to restore it exactly.                                           |
+| **Reset Hidden Items**        | Clears your rules and restores the VS Code defaults (`**/.git`, `**/.svn`, `**/.hg`, `**/CVS`, `**/.DS_Store`, `**/Thumbs.db`, `**/*.git`). |
+| **Update Extension Settings** | Opens the extension's settings.                                                                                                             |
 
-**Toggle Visibility** is the one to reach for day to day — unlike *Disable All*, it snapshots your rules first, so flipping it back restores precisely what you had.
+**Toggle Visibility** is the one to reach for day to day — unlike _Disable All_, it snapshots your rules first, so flipping it back restores precisely what you had.
 
 > The seven default VS Code patterns are protected: they can be toggled, but not removed.
 
@@ -72,22 +72,22 @@ The pane's title bar has these actions:
 
 All commands are available from the Command Palette under the **ExplorerExclude** category.
 
-| Command | ID |
-| --- | --- |
-| Add to Hidden Items ... | `hide-items-custom.exclude` |
-| Remove from Hidden Items | `hide-items-custom.remove` |
-| Toggle Visibility | `hide-items-custom.toggle` |
-| Enable All | `hide-items-custom.enableAll` |
-| Disable All | `hide-items-custom.disableAll` |
-| Reset Hidden Items | `hide-items-custom.reset` |
+| Command                   | ID                               |
+| ------------------------- | -------------------------------- |
+| Add to Hidden Items ...   | `hide-items-custom.exclude`      |
+| Remove from Hidden Items  | `hide-items-custom.remove`       |
+| Toggle Visibility         | `hide-items-custom.toggle`       |
+| Enable All                | `hide-items-custom.enableAll`    |
+| Disable All               | `hide-items-custom.disableAll`   |
+| Reset Hidden Items        | `hide-items-custom.reset`        |
 | Update Extension Settings | `hide-items-custom.openSettings` |
 
 ## Settings
 
-| Setting | Type | Default | Description |
-| --- | --- | --- | --- |
-| `explorerExclude.showPicker` | `boolean` | `true` | Show the glob-pattern picker when hiding an item. When `false`, the exact item you clicked is hidden with no prompt. |
-| `explorerExclude.backup` | `object` | `{}` | Managed automatically. Holds the snapshot of `files.exclude` taken by **Toggle Visibility** so it can be restored. Don't edit this by hand. |
+| Setting                      | Type      | Default | Description                                                                                                                                 |
+| ---------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `explorerExclude.showPicker` | `boolean` | `true`  | Show the glob-pattern picker when hiding an item. When `false`, the exact item you clicked is hidden with no prompt.                        |
+| `explorerExclude.backup`     | `object`  | `{}`    | Managed automatically. Holds the snapshot of `files.exclude` taken by **Toggle Visibility** so it can be restored. Don't edit this by hand. |
 
 ## How it works
 

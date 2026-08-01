@@ -5,6 +5,7 @@
 .vscodeignore
 .eslintrc*
 .prettierrc*
+.prettierignore
 **/*.vsix
 **/.DS_Store
 package-lock.json
