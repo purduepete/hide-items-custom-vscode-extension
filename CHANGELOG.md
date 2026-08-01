@@ -1,5 +1,12 @@
 # Change Log
 
+## v1.0.6
+
+-   Replace the marketplace version and installs badges. shields.io retired its
+    `visual-studio-marketplace` badge family, and because the retired badges still return
+    HTTP 200 they rendered the literal text "retired badge" on the listing instead of
+    failing visibly.
+
 ## v1.0.5
 
 -   Fix the Welcome pane, which opened as a blank tab on every install and upgrade. It
