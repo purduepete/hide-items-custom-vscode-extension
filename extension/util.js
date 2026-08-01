@@ -2,7 +2,6 @@
 
 const fs = require("fs");
 const path = require("path");
-const util = require("util");
 const vscode = require("vscode");
 
 const { init, localize } = require("vscode-nls-i18n");
@@ -111,6 +110,8 @@ const getWorkspace = (context) => {
   }
 
   // If we did not get Workspace, let the user know
+  // Disabled upstream: the toast fired on legitimately workspace-less windows
+  // eslint-disable-next-line no-constant-condition
   if (false) {
     const message = localize("debug.logger.missingWorkspace");
     logger(localize("debug.logger.error", "getWorkspace", message), "error");
@@ -153,6 +154,15 @@ const isUnavailable = (_path) => {
 };
 
 /**
+ * Convert a file system path into a glob path
+ * VS Code glob patterns always use `/`, even on Windows where `\` is an escape character
+ * @param {string} _path
+ */
+const toGlobPath = (_path) => {
+  return _path ? _path.split(path.sep).join("/") : _path;
+};
+
+/**
  * Parse File Path
  * @param {string} _file
  * @param {string} _root
@@ -168,7 +178,7 @@ const parseFilePath = (_file, _root = "") => {
 
       const ext = path.extname(_file);
       const base = path.basename(_file);
-      const dir = path.relative(_root, path.dirname(_file));
+      const dir = toGlobPath(path.relative(_root, path.dirname(_file)));
 
       return {
         path: _file,
@@ -342,14 +352,14 @@ function exclude(uri, callback) {
             case "path":
               break;
             case "ext":
-              regex = _meta[key] ? `**${path.sep}*${_meta[key]}` : undefined;
+              regex = _meta[key] ? `**/*${_meta[key]}` : undefined;
               break;
             case "base":
               regex = _meta[key];
               break;
             case "dir":
               if (_showPicker)
-                regex = _meta[key] ? `${_meta[key] + path.sep}*.*` : undefined;
+                regex = _meta[key] ? `${_meta[key]}/*.*` : undefined;
               break;
           }
           if (regex) {
@@ -358,21 +368,21 @@ function exclude(uri, callback) {
         });
 
         if (_meta["dir"] && _meta["ext"]) {
-          options.push(`${_meta["dir"]}${path.sep}*${_meta["ext"]}`);
+          options.push(`${_meta["dir"]}/*${_meta["ext"]}`);
         } else if (_meta["ext"]) {
           options.push(`*${_meta["ext"]}`);
         }
 
         if (_meta["base"]) {
-          options.push(`**${path.sep}${_meta["base"]}`);
+          options.push(`**/${_meta["base"]}`);
           if (_meta["dir"]) {
-            options.push(`${_meta["dir"]}${path.sep}${_meta["base"]}`);
+            options.push(`${_meta["dir"]}/${_meta["base"]}`);
           }
         }
 
         selections = yield showPicker(options.reverse());
       } else {
-        selections = [path.relative(_root, uri.fsPath)];
+        selections = [toGlobPath(path.relative(_root, uri.fsPath))];
       }
 
       if (selections && selections.length > 0) {
